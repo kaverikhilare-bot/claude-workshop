@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Workshop — Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <span class="nav__logo">Claude<span class="accent">Workshop</span></span>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Amazon Clone &mdash; Proof of Concept</p>
+      <h1 class="hero__title">
+        Better To <span class="accent">Shop</span>.<br />
+        Smarter To <span class="accent">Sell</span>.
+      </h1>
+      <p class="hero__sub">
+        A full-stack e-commerce platform built with TypeScript, Python, and Supabase —
+        featuring intelligent customer capture, inventory management, and seamless checkout.
+      </p>
+      <div class="hero__actions">
+        <a href="#skills" class="btn btn--primary">Explore Features</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+      <div class="hero__badges">
+        <span class="badge">TypeScript</span>
+        <span class="badge">Python FastAPI</span>
+        <span class="badge">Supabase</span>
+        <span class="badge">MCP</span>
+        <span class="badge">Next.js</span>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="storefront">
+        <div class="storefront__bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="storefront__search">
+          <div class="storefront__search-box">
+            <span class="storefront__search-icon">&#9906;</span>
+            <span class="storefront__search-text">Search products...</span>
+          </div>
+        </div>
+        <div class="storefront__grid">
+          <div class="product-card" style="--d:0s"><div class="product-card__img"></div><div class="product-card__name">Premium Widget</div><div class="product-card__price"><span class="accent">$24.99</span></div></div>
+          <div class="product-card" style="--d:.1s"><div class="product-card__img img2"></div><div class="product-card__name">Pro Module</div><div class="product-card__price"><span class="accent">$49.99</span></div></div>
+          <div class="product-card" style="--d:.2s"><div class="product-card__img img3"></div><div class="product-card__name">Data Pack</div><div class="product-card__price"><span class="accent">$12.99</span></div></div>
+          <div class="product-card" style="--d:.3s"><div class="product-card__img img4"></div><div class="product-card__name">API Bundle</div><div class="product-card__price"><span class="accent">$89.99</span></div></div>
+        </div>
+        <div class="storefront__cart">
+          <span>&#128722;</span> 3 items &mdash; <span class="accent">$87.97</span>
+          <button class="storefront__checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section__eyebrow">What We Offer</p>
+      <h2 class="section__title">Platform <span class="accent">Skills</span></h2>
+      <p class="section__sub">
+        Every capability built to serve real customer and business needs — lean, modular, and extensible.
+      </p>
+      <div class="skills__grid">
+
+        <div class="skill-card" data-index="0">
+          <div class="skill-card__icon">&#128101;</div>
+          <h3>Customer Capture</h3>
+          <p>Every visitor touchpoint — newsletter signup, checkout, guest browse — is captured into a unified customer profile. Zero leads lost.</p>
+          <ul class="skill-card__list">
+            <li>Email + name collection</li>
+            <li>Source attribution</li>
+            <li>MCP-triggered capture skill</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-index="1">
+          <div class="skill-card__icon">&#128230;</div>
+          <h3>Inventory Management</h3>
+          <p>Real-time product catalogue backed by Supabase PostgreSQL. Track stock levels, categories, and product metadata with automatic updates.</p>
+          <ul class="skill-card__list">
+            <li>Stock tracking</li>
+            <li>Category filtering</li>
+            <li>Image & metadata storage</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-index="2">
+          <div class="skill-card__icon">&#128179;</div>
+          <h3>Customer Payments</h3>
+          <p>Stripe-powered checkout in test mode for the POC. Secure payment intent flow with order confirmation and receipt generation via Resend.</p>
+          <ul class="skill-card__list">
+            <li>Stripe test mode</li>
+            <li>Order total calculation</li>
+            <li>Email receipts via Resend</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-index="3">
+          <div class="skill-card__icon">&#128736;</div>
+          <h3>MCP Tool Orchestration</h3>
+          <p>All AI-assisted workflows route through a single MCP server. Tools for customer capture, product search, and order processing are available to Claude natively.</p>
+          <ul class="skill-card__list">
+            <li>capture_customer tool</li>
+            <li>search_products tool</li>
+            <li>process_order tool</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-index="4">
+          <div class="skill-card__icon">&#9889;</div>
+          <h3>Async Task Queue</h3>
+          <p>Redis via Upstash free tier handles background jobs — sending emails, updating last-seen timestamps, and processing order confirmations without blocking the request cycle.</p>
+          <ul class="skill-card__list">
+            <li>Upstash Redis (free tier)</li>
+            <li>Non-blocking background jobs</li>
+            <li>Retry logic built-in</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-index="5">
+          <div class="skill-card__icon">&#128200;</div>
+          <h3>Load Balancing & Scaling</h3>
+          <p>Vercel Edge serves the frontend globally. Railway autoscales the Python API. Supabase PgBouncer handles connection pooling. Enterprise-grade resilience at POC cost.</p>
+          <ul class="skill-card__list">
+            <li>Vercel Edge CDN</li>
+            <li>Railway autoscale (1–3 replicas)</li>
+            <li>Supabase PgBouncer pooling</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack" id="stack">
+    <div class="container">
+      <p class="section__eyebrow">Technology</p>
+      <h2 class="section__title">The <span class="accent">Stack</span></h2>
+      <div class="stack__table-wrap">
+        <table class="stack__table">
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>Technology</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Frontend</td><td><span class="badge">TypeScript + Next.js</span></td><td>Amazon-style landing page, SSR</td></tr>
+            <tr><td>Backend API</td><td><span class="badge">Python FastAPI</span></td><td>Business logic, REST endpoints</td></tr>
+            <tr><td>Database</td><td><span class="badge">Supabase</span></td><td>PostgreSQL + Auth + Storage</td></tr>
+            <tr><td>Styling</td><td><span class="badge">Tailwind CSS</span></td><td>Utility-first UI</td></tr>
+            <tr><td>Task Queue</td><td><span class="badge">Redis (Upstash)</span></td><td>Async background jobs</td></tr>
+            <tr><td>Payments</td><td><span class="badge">Stripe</span></td><td>Test-mode checkout</td></tr>
+            <tr><td>Email</td><td><span class="badge">Resend</span></td><td>Customer receipts & onboarding</td></tr>
+            <tr><td>Deployment</td><td><span class="badge">Vercel + Railway</span></td><td>Free-tier hosting</td></tr>
+            <tr><td>AI Tooling</td><td><span class="badge">Claude MCP</span></td><td>Skill + tool orchestration</td></tr>
+            <tr><td>Load Testing</td><td><span class="badge">k6</span></td><td>Performance validation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section__eyebrow">Get In Touch</p>
+      <h2 class="section__title">Let's <span class="accent">Connect</span></h2>
+      <p class="section__sub">
+        Interested in the project, want to collaborate, or have questions about the platform?
+        Reach out directly.
+      </p>
+      <div class="contact__card">
+        <div class="contact__row">
+          <span class="contact__icon">&#9993;</span>
+          <div>
+            <p class="contact__label">Email</p>
+            <a href="mailto:abc@gmail.com" class="contact__value">abc@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <span class="contact__icon">&#128196;</span>
+          <div>
+            <p class="contact__label">Project</p>
+            <span class="contact__value">claude-workshop &mdash; Amazon Clone POC</span>
+          </div>
+        </div>
+        <div class="contact__row">
+          <span class="contact__icon">&#9679;</span>
+          <div>
+            <p class="contact__label">Status</p>
+            <span class="contact__value contact__status">
+              <span class="status-dot"></span> Active Development
+            </span>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form__group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your full name" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__feedback" id="formFeedback"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">Claude<span class="accent">Workshop</span></span>
+      <p class="footer__copy">&copy; 2026 claude-workshop. Built for demonstration purposes.</p>
+      <div class="footer__links">
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
