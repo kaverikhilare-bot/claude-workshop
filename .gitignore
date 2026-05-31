@@ -1,0 +1,26 @@
+# Claude Code internals
+.claude/
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+.pytest_cache/
+.coverage
+
+# Node
+node_modules/
+.next/
+dist/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
